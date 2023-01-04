@@ -7,6 +7,8 @@ export const Layout = () => {
     return ( <>
         <Header>
             <nav>
+                <Link to={'/contacts'}>Contacts</Link>
+                <Link></Link>
                 <Link></Link>
             </nav>
         </Header>
