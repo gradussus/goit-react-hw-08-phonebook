@@ -4,6 +4,7 @@ import { Filter } from './Filter/Filter';
 import { Container } from './App.styled';
 import { useGetContactsQuery } from 'redux/API';
 
+
 export const App = () => {
   const { data, error, isLoading } = useGetContactsQuery();
 
