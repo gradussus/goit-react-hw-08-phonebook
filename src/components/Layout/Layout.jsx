@@ -8,8 +8,8 @@ export const Layout = () => {
         <Header>
             <nav>
                 <Link to={'/contacts'}>Contacts</Link>
-                <Link></Link>
-                <Link></Link>
+                <Link to={'/login'}>Sign in</Link>
+                <Link to={'/register'}>Sign up</Link>
             </nav>
         </Header>
         <Suspense

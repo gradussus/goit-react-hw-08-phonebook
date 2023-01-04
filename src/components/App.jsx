@@ -5,7 +5,7 @@ import { Layout } from './Layout/Layout'
 
 import { Container } from './App.styled';
 
-const Contacts = lazy(() => import('../pages/Contacts'));
+const Contacts = lazy(() => import('../pages/Contacts/Contacts'));
 
 
 export const App = () => {
