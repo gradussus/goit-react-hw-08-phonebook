@@ -20,3 +20,12 @@ export const login = createAsyncThunk('auth/login', async credentials => {
     window.alert('Sign in wrong');
   }
 });
+
+export const logout = createAsyncThunk('auth/login', async credentials => {
+  try {
+    const { data } = await axios.post('users/login', credentials);
+    return data;
+  } catch (error) {
+    window.alert('Sign in wrong');
+  }
+});
