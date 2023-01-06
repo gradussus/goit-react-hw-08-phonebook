@@ -2,22 +2,26 @@ import { useState } from 'react';
 import { AddContactForm } from './ContactForm.styled';
 import { nanoid } from 'nanoid';
 import { useAddContactMutation, useGetContactsQuery } from 'redux/API';
-// import { addContact, getContacts } from 'redux/contactsSlice';
+import { getContacts } from 'redux/contacts/contactsSelectors';
+import { addContact } from 'redux/contacts/contactsOperations';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const ContactForm = () => {
   const [contactName, setContactName] = useState('');
   const [contactNumber, setContactNumber] = useState('');
-  const { data } = useGetContactsQuery();
-  const [addContact] = useAddContactMutation();
+
+  const dispatch = useDispatch();
+  const { contacts } = useSelector(getContacts);
+  // const [addContact] = useAddContactMutation();
 
   const newContact = async (name, number) => {
     const includeName = name => {
-      return data.find(
+      return contacts.find(
         e => e.name.toLocaleLowerCase() === name.toLocaleLowerCase()
       );
     };
     const includeNumber = () => {
-      return data.find(e => e.number === number);
+      return contacts.find(e => e.number === number);
     };
     const contact = {
       id: nanoid(10),

@@ -5,20 +5,23 @@ import { fetchContacts, addContact, deleteContact } from "./contactsOperations";
 const contactsSlice = createSlice({
     name: 'contacts',
     initialState: {
-        items: [],
+        contacts: [],
         isLoading: false,
         error: null
     }   ,
     extraReducers: {
-        [fetchContacts.pending](state) {
+      [fetchContacts.pending](state) {
+        console.log('1')
             state.isLoading = true;
           },
-          [fetchContacts.fulfilled](state, action) {
+      [fetchContacts.fulfilled](state, action) {
+        console.log('2')
             state.isLoading = false;
             state.error = null;
-            state.items = action.payload;
+            state.contacts = action.payload;
           },
-          [fetchContacts.rejected](state, action) {
+      [fetchContacts.rejected](state, action) {
+        console.log('3')
             state.isLoading = false;
             state.error = action.payload;
           },
@@ -29,7 +32,7 @@ const contactsSlice = createSlice({
           [addContact.fulfilled](state, action) {
             state.isLoading = false;
             state.error = null;
-            state.items = [action.payload, ...state.items];
+            state.contacts = [action.payload, ...state.contacts];
           },
           [addContact.rejected](state, action) {
             state.isLoading = false;
@@ -42,7 +45,7 @@ const contactsSlice = createSlice({
           [deleteContact.fulfilled](state, action) {
             state.isLoading = false;
             state.error = null;
-            state.items = state.items.filter(el => el.id !== action.payload.id);
+            state.contacts = state.contacts.filter(el => el.id !== action.payload.id);
           },
           [deleteContact.rejected](state, action) {
             state.isLoading = false;
@@ -52,3 +55,4 @@ const contactsSlice = createSlice({
         //   додати редагування!!!
     }
 },)
+export const contactsReducer = contactsSlice.reducer;
