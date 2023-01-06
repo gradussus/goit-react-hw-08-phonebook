@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 export const Header = styled.header`
 background-color: tomato;
-margin: 25px;
+padding-top: 25px;
+padding-bottom: 25px;
 width: 100%;
 `
 
