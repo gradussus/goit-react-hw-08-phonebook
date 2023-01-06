@@ -12,7 +12,7 @@ export const fetchContacts = createAsyncThunk(
             return data
         }
         catch {
-            window.alert('Something wrong')
+            window.alert('Something wrong1')
         }
     }
 )
@@ -25,7 +25,7 @@ export const addContact = createAsyncThunk(
             return data
         }
         catch {
-            window.alert('Something wrong')
+            window.alert('Something wrong2')
         }
     }
 )
@@ -38,7 +38,7 @@ export const deleteContact = createAsyncThunk(
             return data
         }
         catch {
-            window.alert('Something wrong')
+            window.alert('Something wrong3')
         }
     }
 )

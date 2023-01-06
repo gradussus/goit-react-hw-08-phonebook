@@ -26,15 +26,18 @@ const contactsSlice = createSlice({
             state.error = action.payload;
           },
 
-          [addContact.pending](state) {
+      [addContact.pending](state) {
+        console.log('5')
             state.isLoading = true;
           },
-          [addContact.fulfilled](state, action) {
+      [addContact.fulfilled](state, action) {
+        console.log('6')
             state.isLoading = false;
             state.error = null;
-            state.contacts = [action.payload, ...state.contacts];
+            state.contacts = [...state.contacts, action.payload];
           },
-          [addContact.rejected](state, action) {
+      [addContact.rejected](state, action) {
+        console.log('7')
             state.isLoading = false;
             state.error = action.payload;
         },
