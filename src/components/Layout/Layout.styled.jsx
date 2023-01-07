@@ -23,4 +23,11 @@ export const Wrapper = styled.div`
 export const Main = styled.main`
   flex: 1 1 auto;
 `;
-export const Footer = styled.footer``;
+export const Footer = styled.footer`
+  background-color: tomato;
+  padding-bottom: 25px;
+  padding-top: 25px;
+`;
+export const SocialLink = styled.a`
+  color: black;
+`;

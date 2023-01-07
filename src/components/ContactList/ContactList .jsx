@@ -3,14 +3,15 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getFilter } from 'redux/filterSlice';
 import { getContacts } from 'redux/contacts/contactsSelectors';
 import { useEffect } from 'react';
-import { fetchContacts, deleteContact } from 'redux/contacts/contactsOperations';
+import {
+  fetchContacts,
+  deleteContact,
+} from 'redux/contacts/contactsOperations';
 
 export const ContactList = () => {
-
   const dispatch = useDispatch();
   const { contacts, isLoading, error } = useSelector(getContacts);
   useEffect(() => {
-    console.log('4')
     dispatch(fetchContacts());
   }, [dispatch]);
 

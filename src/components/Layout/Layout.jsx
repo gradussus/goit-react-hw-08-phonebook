@@ -4,7 +4,14 @@ import { Outlet } from 'react-router-dom';
 import { getIsLoggedIn } from 'redux/auth/authSelectors';
 import { useSelector } from 'react-redux';
 
-import { Header, Link, Footer, Wrapper, Main } from './Layout.styled';
+import {
+  Header,
+  Link,
+  Footer,
+  Wrapper,
+  Main,
+  SocialLink,
+} from './Layout.styled';
 
 export const Layout = () => {
   const isLoggedIn = useSelector(getIsLoggedIn);
@@ -12,7 +19,6 @@ export const Layout = () => {
     <Wrapper>
       <Header>
         <nav>
-          {/* <Link to={'/contacts'}>Contacts</Link> */}
           {isLoggedIn ? (
             <UserMenu />
           ) : (
@@ -28,7 +34,14 @@ export const Layout = () => {
           <Outlet />
         </Suspense>
       </Main>
-      <Footer>sadflkhjsadflkhj</Footer>
+      <Footer>
+        © 2023 | All Rights Reserved | Developed by Vitalii Shevchenko <br />
+        <SocialLink href="https://github.com/gradussus">Github</SocialLink> |
+        <SocialLink href="https://www.linkedin.com/in/vitalii-shevchenko/">
+          {' '}
+          LinkedIn
+        </SocialLink>
+      </Footer>
     </Wrapper>
   );
 };
