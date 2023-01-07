@@ -5,10 +5,18 @@ import { Layout } from './Layout/Layout';
 import { Container } from './App.styled';
 import RegisterPage from 'pages/Register/Register';
 import LoginPage from 'pages/Login/Login';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { refreshUser } from 'redux/auth/authOperations';
 
 const Contacts = lazy(() => import('../pages/Contacts/Contacts'));
 
 export const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
   return (
     <Container>
       <Routes>
