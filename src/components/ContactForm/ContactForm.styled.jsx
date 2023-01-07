@@ -9,3 +9,6 @@ export const AddContactForm = styled.form`
   margin-left: auto;
   margin-right: auto;
 `;
+export const Button = styled.button`
+  margin-top: 15px;
+`;

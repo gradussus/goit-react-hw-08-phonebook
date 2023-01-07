@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AddContactForm } from './ContactForm.styled';
+import { AddContactForm, Button } from './ContactForm.styled';
 import { getContacts } from 'redux/contacts/contactsSelectors';
 import { addContact } from 'redux/contacts/contactsOperations';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,16 +12,18 @@ export const ContactForm = () => {
   const { contacts } = useSelector(getContacts);
 
   const newContact = (name, number) => {
-    const includeName = contacts.find(e => e.name.toLowerCase() === name.toLowerCase())
-    const includeNumber = contacts.find(e => e.number === number)
- 
+    const includeName = contacts.find(
+      e => e.name.toLowerCase() === name.toLowerCase()
+    );
+    const includeNumber = contacts.find(e => e.number === number);
+
     if (includeName) {
       return alert(`${name} is already in contacts`);
     }
     if (includeNumber) {
       return alert(`${number} is already in contacts`);
     }
-       dispatch(addContact({name: name, number: number}));
+    dispatch(addContact({ name: name, number: number }));
   };
 
   const handleChange = e => {
@@ -66,7 +68,7 @@ export const ContactForm = () => {
         />
       </label>
       <br />
-      <button type="submit">Add contact</button>
+      <Button type="submit">Add contact</Button>
     </AddContactForm>
   );
 };

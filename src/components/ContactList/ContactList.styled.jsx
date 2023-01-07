@@ -4,7 +4,7 @@ export const List = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 450px;
   background-color: tomato;
   border-radius: 10px;
   padding: 25px;
@@ -19,5 +19,14 @@ export const Item = styled.li`
   width: 100%;
   text-align: start;
 `;
-
-export const DeleteBtn = styled.button``;
+export const Name = styled.span`
+  font-weight: 600;
+  flex-basis: 100px;
+`;
+export const Number = styled.span`
+  flex-basis: 100px;
+`;
+export const DeleteBtn = styled.button`
+  padding: 0px 20px;
+  margin: 0px;
+`;
