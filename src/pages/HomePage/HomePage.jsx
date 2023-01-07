@@ -6,21 +6,11 @@ const HomePage = () => {
   const isLoggedIn = useSelector(getIsLoggedIn);
   return (
     <>
-      {/* <div>
-        In this application you can save your contacts. To do this, you need to
-        <br />
-        <br />
-        <Link to={'/register'}>REGISTER</Link>
-        <br />
-        <br /> or <br />
-        <br />
-        <Link to={'/login'}>LOGIN</Link> <br />
-      </div> */}
       {isLoggedIn ? (
         <>
           <H1>Welcome back to Phonebook</H1>
           <div>
-            Welcome back dear user. All your saved contacts can be found here
+            Welcome back, dear user. All your saved contacts can be found here
             <br />
             <br />
             <Link to={'/contacts'}>YOUR CONTACTS</Link>

@@ -5,9 +5,9 @@ import { Filter } from '../../components/Filter/Filter';
 const Contacts = () => {
   return (
     <>
-      <h1 style={{ fontFamily: 'Sriracha' }}>Phonebook</h1>
+      <h1>Phonebook</h1>
       <ContactForm />
-      <h2 style={{ fontFamily: 'Sriracha' }}>Contacts</h2>
+      <h2>Contacts</h2>
       <Filter />
       <ContactList />
     </>

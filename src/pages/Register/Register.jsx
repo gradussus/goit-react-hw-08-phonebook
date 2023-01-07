@@ -36,11 +36,13 @@ export default function RegisterPage() {
       <form onSubmit={handleSubmit} autoComplete="off">
         <label>
           Name:
+          <br />
           <input type="text" name="name" value={name} onChange={handleChange} />
         </label>
-
+        <br />
         <label>
           Email:
+          <br />
           <input
             type="email"
             name="email"
@@ -48,9 +50,10 @@ export default function RegisterPage() {
             onChange={handleChange}
           />
         </label>
-
+        <br />
         <label>
           Password:
+          <br />
           <input
             type="password"
             name="password"
@@ -58,7 +61,8 @@ export default function RegisterPage() {
             onChange={handleChange}
           />
         </label>
-
+        <br />
+        <br />
         <button type="submit">Sign Up!</button>
       </form>
     </main>
