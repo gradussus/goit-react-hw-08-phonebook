@@ -40,20 +40,17 @@ export const logout = createAsyncThunk('auth/logout', async () => {
     window.alert('Logout is wrong');
   }
 });
-export const refreshUser = createAsyncThunk(
-  'auth/refresh',
-  async (_, thunkAPI) => {
-    const state = thunkAPI.getState();
-    const persistedToken = state.auth.token;
-    if (!token) {
-      return;
-    }
-    token.set(persistedToken);
-    try {
-      const { data } = await axios.get('users/current');
-      return data;
-    } catch (error) {
-      console.error('kjsad');
-    }
+export const refresh = createAsyncThunk('auth/refresh', async (_, thunkAPI) => {
+  const state = thunkAPI.getState();
+  const persistedToken = state.auth.token;
+  if (!persistedToken) {
+    return thunkAPI.rejectWithValue();
   }
-);
+  token.set(persistedToken);
+  try {
+    const { data } = await axios.get('users/current');
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+});
