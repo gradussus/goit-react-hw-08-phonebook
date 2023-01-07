@@ -10,7 +10,7 @@ import {
 
 export const ContactList = () => {
   const dispatch = useDispatch();
-  const { contacts, isLoading, error } = useSelector(getContacts);
+  const { contacts } = useSelector(getContacts);
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
