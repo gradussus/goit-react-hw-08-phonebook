@@ -6,4 +6,6 @@ export const AddContactForm = styled.form`
   border-radius: 10px;
   text-align: center;
   padding: 25px;
+  margin-left: auto;
+  margin-right: auto;
 `;

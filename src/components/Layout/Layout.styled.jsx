@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
   width: 100%;
   min-height: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;

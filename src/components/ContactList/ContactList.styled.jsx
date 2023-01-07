@@ -8,6 +8,8 @@ export const List = styled.ul`
   background-color: #ffd1e0;
   border-radius: 10px;
   padding: 25px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const Item = styled.li`

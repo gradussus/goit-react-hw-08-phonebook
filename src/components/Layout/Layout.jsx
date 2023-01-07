@@ -12,7 +12,7 @@ export const Layout = () => {
     <Wrapper>
       <Header>
         <nav>
-          <Link to={'/contacts'}>Contacts</Link>
+          {/* <Link to={'/contacts'}>Contacts</Link> */}
           {isLoggedIn ? (
             <UserMenu />
           ) : (
@@ -24,9 +24,7 @@ export const Layout = () => {
         </nav>
       </Header>
       <Main>
-        <Suspense
-        // fallback={<Loader />}
-        >
+        <Suspense>
           <Outlet />
         </Suspense>
       </Main>
