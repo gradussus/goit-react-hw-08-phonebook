@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import { refresh } from 'redux/auth/authOperations';
 import { PublicRoute } from './Routes/PublicRoute';
 
+const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const ContactsPage = lazy(() => import('../pages/Contacts/Contacts'));
 const LoginPage = lazy(() => import('../pages/Login/Login'));
 const RegisterPage = lazy(() => import('../pages/Register/Register'));
@@ -23,6 +24,7 @@ export const App = () => {
     <Container>
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
           <Route
             path="/login"
             element={

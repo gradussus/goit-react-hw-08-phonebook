@@ -4,12 +4,12 @@ import { Outlet } from 'react-router-dom';
 import { getIsLoggedIn } from 'redux/auth/authSelectors';
 import { useSelector } from 'react-redux';
 
-import { Header, Link } from './Layout.styled';
+import { Header, Link, Footer, Wrapper, Main } from './Layout.styled';
 
 export const Layout = () => {
   const isLoggedIn = useSelector(getIsLoggedIn);
   return (
-    <>
+    <Wrapper>
       <Header>
         <nav>
           <Link to={'/contacts'}>Contacts</Link>
@@ -23,12 +23,14 @@ export const Layout = () => {
           )}
         </nav>
       </Header>
-      <Suspense
-      // fallback={<Loader />}
-      >
-        <Outlet />
-      </Suspense>
-      <footer>sadflkhjsadflkhj</footer>
-    </>
+      <Main>
+        <Suspense
+        // fallback={<Loader />}
+        >
+          <Outlet />
+        </Suspense>
+      </Main>
+      <Footer>sadflkhjsadflkhj</Footer>
+    </Wrapper>
   );
 };

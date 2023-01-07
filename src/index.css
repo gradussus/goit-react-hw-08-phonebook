@@ -13,7 +13,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-asd {
-  background-color: tomato;
+html,
+body {
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+section {
+  height: 100%;
 }
