@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AddContactForm, Button } from './ContactForm.styled';
+import { AddContactForm, Button, Input } from './ContactForm.styled';
 import { getContacts } from 'redux/contacts/contactsSelectors';
 import { addContact } from 'redux/contacts/contactsOperations';
 import { useDispatch, useSelector } from 'react-redux';
@@ -47,7 +47,7 @@ export const ContactForm = () => {
     <AddContactForm onSubmit={onSubmit} autoComplete="off">
       <label>
         <p>Name</p>
-        <input
+        <Input
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -58,7 +58,7 @@ export const ContactForm = () => {
       </label>
       <label>
         <p>Number</p>
-        <input
+        <Input
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"

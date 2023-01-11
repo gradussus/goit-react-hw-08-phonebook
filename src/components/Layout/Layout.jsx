@@ -31,7 +31,7 @@ export const Layout = () => {
       </Header>
       <Main>
         <Suspense>
-          <Outlet />
+          <Outlet/>
         </Suspense>
       </Main>
       <Footer>

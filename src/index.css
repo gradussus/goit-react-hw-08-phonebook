@@ -23,6 +23,14 @@ body {
 section {
   height: 100%;
 }
+input{
+  text-align: center;
+  background-color: #fafafa;
+  height: 35px;
+  width: 250px;
+  border-color: tomato;
+  font-size: large;
+}
 button {
   text-decoration: none;
   display: inline-block;

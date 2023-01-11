@@ -30,7 +30,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <main>
+    <>
       <h1>Register now</h1>
 
       <form onSubmit={handleSubmit} autoComplete="off">
@@ -65,6 +65,6 @@ export default function RegisterPage() {
         <br />
         <button type="submit">Sign Up!</button>
       </form>
-    </main>
+    </>
   );
 }

@@ -27,7 +27,7 @@ export default function LoginPage() {
   };
 
   return (
-    <main>
+    <>
       <h1>Sign in</h1>
 
       <form onSubmit={handleSubmit} autoComplete="off">
@@ -56,6 +56,6 @@ export default function LoginPage() {
         <br />
         <button type="submit">Sign Up!</button>
       </form>
-    </main>
+    </>
   );
 }

@@ -12,3 +12,6 @@ export const AddContactForm = styled.form`
 export const Button = styled.button`
   margin-top: 15px;
 `;
+export const Input = styled.input`
+
+`

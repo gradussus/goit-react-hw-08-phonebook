@@ -11,8 +11,7 @@ export const Filter = () => {
 
   return (
     <label>
-      <p>Find contacts by name</p>
-      <input type="text" value={filter} onChange={onFilterChange} />
+      <input placeholder="Find contacts by name" type="text" value={filter} onChange={onFilterChange} />
     </label>
   );
 };
