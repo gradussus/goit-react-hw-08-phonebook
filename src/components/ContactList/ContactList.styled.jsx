@@ -21,10 +21,12 @@ export const Item = styled.li`
 `;
 export const Name = styled.span`
   font-weight: 600;
-  flex-basis: 100px;
+  flex-basis: 200px;
+  font-family: 'La Belle Aurore', cursive;
 `;
 export const Number = styled.span`
-  flex-basis: 100px;
+  flex-basis: 150px;
+  font-family: 'La Belle Aurore', cursive;
 `;
 export const DeleteBtn = styled.button`
 
