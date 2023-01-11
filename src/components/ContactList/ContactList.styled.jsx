@@ -5,9 +5,9 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   width: 450px;
-  background-color: tomato;
+  border: tomato solid;
   border-radius: 10px;
-  padding: 25px;
+  padding: 24px;
   margin-left: auto;
   margin-right: auto;
 `;
@@ -15,7 +15,7 @@ export const List = styled.ul`
 export const Item = styled.li`
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  height: 40px;
   width: 100%;
   text-align: start;
 `;

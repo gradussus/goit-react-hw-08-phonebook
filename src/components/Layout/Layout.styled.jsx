@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Header = styled.header`
-  background-color: tomato;
+border-bottom: tomato solid;
   padding-top: 25px;
   padding-bottom: 25px;
 `;
@@ -27,7 +27,7 @@ export const Main = styled.main`
   background-position: 0 0, -1px -1px, -1px 1px;
 `;
 export const Footer = styled.footer`
-  background-color: tomato;
+border-top: tomato solid;
   padding-bottom: 25px;
   padding-top: 25px;
 `;
