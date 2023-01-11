@@ -13,7 +13,6 @@ export const Link = styled(NavLink)`
 `;
 export const Wrapper = styled.div`
   width: 100%;
-  min-height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -21,7 +20,7 @@ export const Wrapper = styled.div`
   align-content: stretch;
 `;
 export const Main = styled.main`
-  flex: 1 1 auto;
+min-height: calc(100vh - 89.78px - 71.39px);
   background-image: linear-gradient(90deg, transparent 81px, #ED82AD 81px, #ED82AD 84px, transparent 84px), linear-gradient(#bbb 1px, transparent 0px), linear-gradient(90deg, #bbb 1px, transparent 0px);
   background-size: 100% 100%, 20px 20px, 20px 20px;
   background-position: 0 0, -1px -1px, -1px 1px;

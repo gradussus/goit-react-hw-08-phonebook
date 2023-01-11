@@ -7,7 +7,7 @@ export const List = styled.ul`
   width: 450px;
   border: tomato solid;
   border-radius: 10px;
-  padding: 24px;
+  padding: 23px;
   margin-left: auto;
   margin-right: auto;
 `;
@@ -27,6 +27,8 @@ export const Number = styled.span`
   flex-basis: 100px;
 `;
 export const DeleteBtn = styled.button`
+
   padding: 0px 20px;
-  margin: 0px;
+  margin-top: -4px;
+  height: 19px;
 `;

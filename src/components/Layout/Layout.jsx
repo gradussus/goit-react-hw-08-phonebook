@@ -16,8 +16,8 @@ import {
 export const Layout = () => {
   const isLoggedIn = useSelector(getIsLoggedIn);
   return (
-    <Wrapper>
-      <Header>
+          <Wrapper>
+    <Header>
         <nav>
           {isLoggedIn ? (
             <UserMenu />
